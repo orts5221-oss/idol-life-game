@@ -385,7 +385,7 @@ body.game-home #app{height:100%;overflow:hidden}
 .game-stage .anime-touch .anime-hair-portrait{object-fit:contain!important;object-position:center center!important}
 /* v1.21: preview face enlargement only; keep home view unchanged */
 .design-preview{overflow:hidden!important;position:relative}
-.design-preview .anime-hair-portrait{width:138%!important;height:138%!important;max-width:none!important;max-height:none!important;position:absolute!important;left:50%!important;top:48%!important;transform:translate(-50%,-50%)!important;object-fit:contain!important;object-position:center center!important}
+.design-preview .anime-hair-portrait{width:170%!important;height:170%!important;max-width:none!important;max-height:none!important;position:absolute!important;left:50%!important;top:55%!important;transform:translate(-50%,-50%)!important;object-fit:contain!important;object-position:center center!important}
 
 /* v1.22: full-body illustrations in action/home stage only; close-ups remain in character creator */
 .game-stage .anime-touch .anime-hair-portrait.anime-fullbody{width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center bottom!important;inset:0!important}
@@ -396,7 +396,7 @@ body.game-home #app{height:100%;overflow:hidden}
 .game-stage .idol-touch-portrait.anime-touch.hair-bob{translate:10% 0}
 /* v1.31: alpha-bounds centered high-resolution portraits; keep existing 3 */
 .game-stage .idol-touch-portrait.anime-touch:is(.hair-ponytail,.hair-halfup,.hair-sidetail,.hair-bun,.hair-medium,.hair-short){translate:0 0}
-</style></head><body><main><header><h1>🎀 アイドル人生</h1><div>12歳から始まる、あなただけのアイドル物語</div><div class="sub">Ver.1.32｜6種類の中央配置・画質調整</div></header><div id="app"></div></main><script>
+</style></head><body><main><header><h1>🎀 アイドル人生</h1><div>12歳から始まる、あなただけのアイドル物語</div><div class="sub">Ver.1.33｜髪型選択の顔アップ調整</div></header><div id="app"></div></main><script>
 'use strict';const KEY='idol_life_save_v1';const R={C:{base:1,pay:1000,initial:100,mental:5},B:{base:2,pay:3000,initial:300,mental:10},A:{base:3,pay:10000,initial:600,mental:15},S:{base:5,pay:30000,initial:900,mental:25}};
 const defs=[['SHIBUYA GIRLS','C','monthly'],['愛情過剰摂取','B','half'],['きゅるりと未完成','A','year'],['乃木坂46','S','saka'],['櫻坂46','S','saka'],['日向坂46','S','saka'],['AKB48','S','forty'],['NMB48','S','forty'],['＝LOVE','S','sashi'],['≠ME','S','sashi'],['≒JOY','S','sashi'],['FRUITS ZIPPER','S','kawaii'],['CANDY TUNE','S','kawaii'],['CUTIE STREET','S','kawaii']];
 let s=null,tab='home',queue=[],notice='';const $=x=>document.getElementById(x),rand=(a,b)=>Math.floor(Math.random()*(b-a+1))+a,clamp=(x,a=0,b=1000)=>Math.max(a,Math.min(b,x)),fmt=n=>Math.floor(n).toLocaleString('ja-JP'),age=()=>12+Math.floor(s.week/48),yr=()=>Math.floor(s.week/48),month=()=>Math.floor(s.week%48/4)+1,wim=()=>s.week%4+1,group=()=>s.groups.find(g=>g.name===s.current),isIdol=()=>!!s.current;
